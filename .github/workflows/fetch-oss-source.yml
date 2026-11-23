@@ -1,0 +1,45 @@
+name: Fetch temporary OSS file for analysis
+
+on:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  fetch:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download signed OSS object
+        env:
+          OSS_DOWNLOAD_URL: ${{ secrets.OSS_DOWNLOAD_URL }}
+        run: |
+          set -euo pipefail
+          if [ -z "${OSS_DOWNLOAD_URL:-}" ]; then
+            echo "Missing repository secret OSS_DOWNLOAD_URL"
+            exit 1
+          fi
+          mkdir -p fetched
+          curl --fail --location --silent --show-error \
+            --retry 2 --connect-timeout 20 --max-time 300 \
+            --max-filesize 200000000 \
+            "$OSS_DOWNLOAD_URL" -o fetched/oss_download.bin
+          echo "Downloaded bytes: $(wc -c < fetched/oss_download.bin)"
+          echo "SHA-256:"
+          sha256sum fetched/oss_download.bin
+          echo "File type:"
+          file fetched/oss_download.bin
+          if unzip -t fetched/oss_download.bin >/tmp/unzip-test.txt 2>&1; then
+            echo "ZIP_TEST=PASS"
+            cat /tmp/unzip-test.txt
+          else
+            echo "ZIP_TEST=NOT_A_VALID_ZIP_OR_NOT_A_ZIP"
+            head -30 /tmp/unzip-test.txt || true
+          fi
+      - name: Upload downloaded file as a short-lived artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: OSS_DOWNLOAD_FOR_ANALYSIS
+          path: fetched/oss_download.bin
+          if-no-files-found: error
+          retention-days: 1
