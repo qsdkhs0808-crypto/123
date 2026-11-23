@@ -1,0 +1,5 @@
+resource_id_hex,ce_original_index,ce_prev_id,ce_next_id,ce_prev_common_id,ce_next_common_id,pk_orig_prev_index,pk_orig_next_index,pk_gap_between_commons,cand1_final_index,cand1_prev_id,cand1_next_id,local_relative_order_preserved
+0x5320bafb,5880,0x531dd20b,0x5323f0ee,0x531dd20b,0x5323f0ee,5290,5291,1,5291,0x531dd20b,0x5323f0ee,True
+0xaa8bbc8b,11995,0xaa8b51e2,0xaa8d3e31,0xaa8b51e2,0xaa8d3e31,10777,10778,1,10779,0xaa8b51e2,0xaa8d3e31,True
+0xbf735461,13440,0xbf728d66,0xbf73bffb,0xbf728d66,0xbf73bffb,12042,12043,1,12045,0xbf728d66,0xbf73bffb,True
+0xcce75262,14383,0xcce4e2d6,0xccf2909d,0xcce4e2d6,0xccf2909d,12900,12901,1,12904,0xcce4e2d6,0xccf2909d,True
