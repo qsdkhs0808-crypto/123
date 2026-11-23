@@ -1,0 +1,15 @@
+metric_name,value,verdict,details
+ce_normal_records_count,18045,PASS,CE ScreenLayout 일반 레코드 총수
+pk_normal_records_count,16228,PASS,PK ScreenLayout 일반 레코드 총수
+cand1_normal_records_count,16232,PASS,"후보 1 일반 레코드 총수 (16,228 + 4)"
+common_resource_id_count,16231,PASS,CE와 후보 1 간 공통 Resource ID 수
+ce_only_resource_id_count,1814,INFO,CE에만 존재하는 리소스 수 (미이식 UI 등)
+pk_only_resource_id_count,1,INFO,PK에만 존재하는 리소스 수 (['0x7f1073b9'])
+ce_duplicate_ids_count,0,PASS,CE 원본 중복 ID 개수
+pk_duplicate_ids_count,0,PASS,PK 원본 중복 ID 개수
+ce_projected_sequence_len,16231,PASS,CE 투영 시퀀스 길이
+cand1_projected_sequence_len,16231,PASS,후보 1 투영 시퀀스 길이
+projected_order_match,True,PASS,ce_projected == cand1_projected 결과
+mismatch_count,0,PASS,투영 시퀀스 불일치 개수
+first_mismatch_info,None,PASS,최초 불일치 위치 및 ID
+overall_order_verdict,PASS,PASS,전체 상대 순서 최종 판정
