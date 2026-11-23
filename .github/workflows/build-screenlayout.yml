@@ -1,0 +1,34 @@
+name: Build ScreenLayout RDB candidate
+
+on:
+  push:
+    branches:
+      - chatgpt-rdb-build
+    paths:
+      - 'tools/build_screenlayout_rdb.py'
+      - '.github/workflows/build-screenlayout.yml'
+      - 'rdb/ScreenLayout.rdb'
+      - 'rdb/ce/ScreenLayout.rdb'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+      - name: Build and validate candidate
+        run: python3 tools/build_screenlayout_rdb.py
+      - name: Upload candidate and reports
+        uses: actions/upload-artifact@v4
+        with:
+          name: SCREENLAYOUT_RDB_CANDIDATE
+          path: |
+            dist/ScreenLayout.rdb
+            dist/validation.json
+            dist/SHA256.txt
+            dist/BUILD_REPORT.md
+          if-no-files-found: error
