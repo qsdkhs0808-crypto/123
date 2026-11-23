@@ -1,0 +1,5 @@
+﻿target_res_id_hex,rdb_loc_str,suffix_hex,suffix_dec,expected_bin_filename,bin_offset_hex,bin_total_len_bytes,actual_bin_magic,actual_bin_res_id_hex,actual_bin_type_hash_hex,actual_bin_flags_hex,bin_declared_size_bytes,actual_decomp_size_bytes,zero_terminator_found,zero_terminator_offset_hex,magic_match,res_id_match,type_hash_match,length_match,decl_decomp_match,crosscheck_verdict
+0x5320bafb,3ba570@498f#51,0x51,81,ScreenLayout.rdb.bin81,0x003ba570,18831,IDRK0000,0x5320bafb,0xafbec60c,0x00100000,4194360,4194360,Y,0x003beef7,Y,Y,Y,Y,Y,PASS
+0xaa8bbc8b,3bef00@7d824#51,0x51,81,ScreenLayout.rdb.bin81,0x003bef00,514084,IDRK0000,0xaa8bbc8b,0xafbec60c,0x00100000,2883780,2883780,Y,0x0043c71c,Y,Y,Y,Y,Y,PASS
+0xbf735461,43c730@456d9#51,0x51,81,ScreenLayout.rdb.bin81,0x0043c730,284377,IDRK0000,0xbf735461,0xafbec60c,0x00100000,4718676,4718676,Y,0x00481e01,Y,Y,Y,Y,Y,PASS
+0xcce75262,4dbe10@1ae8#51,0x51,81,ScreenLayout.rdb.bin81,0x004dbe10,6888,IDRK0000,0xcce75262,0xafbec60c,0x00100000,262200,262200,Y,0x004dd8f0,Y,Y,Y,Y,Y,PASS

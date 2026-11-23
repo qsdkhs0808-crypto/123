@@ -1,0 +1,19 @@
+﻿item_id,test_item,status,detail
+1,RDB Magic,PASS,magic = b'_DRK0000'
+2,Header Size,PASS,header_size = 32
+3,Header Record Count,PASS,record_count = 16233
+4,Header Index Hash,PASS,index_hash = 0x8c759c7f
+5,Actual Parsed Count,PASS,parsed = 16233
+6,All Records IDRK Magic,PASS,"모든 16,233개 레코드 IDRK0000 매직 확인"
+7,Independent Record Size Formula,PASS,size == 56 + meta_size + loc_size 전수 만족
+8,Location Grammar and Size Valid,PASS,일반 리소스 loc_size > 0 및 종단 레코드 loc_size == 0 만족
+9,File End Position Match,PASS,"final_pos = 1386012, total_size = 1386012"
+10,Record 4B Alignment,PASS,모든 레코드 오프셋 4바이트 정렬 만족
+11,Padding Bytes Zero Integrity,PASS,모든 정렬 패딩 바이트가 0x00임 확인
+12,No Duplicate Resource ID,PASS,중복 ID 개수: 0
+13,4 Target IDs Registered,PASS,"0x5320bafb, 0xaa8bbc8b, 0xbf735461, 0xcce75262 전원 등록 확인"
+14,All Original PK IDs Preserved,PASS,기존 16229개 ID 전원 포함
+15,Terminator Record at Final Position,PASS,"마지막 idx=16232, res_id=0x8c759c7f"
+16,Target Location Matches BIN Headers,PASS,4개 리소스 Location 오프셋/길이가 PK bin81과 100% 일치
+17,Target Declared Matches Decomp Size,PASS,선언된 비압축 크기와 실제 청크 해제 크기 100% 일치
+18,Index Hash Dynamic Algorithm Verified,UNKNOWN,헤더와 종단레코드 ID 일치는 확인되었으나 동적 계산식은 자료 부족
