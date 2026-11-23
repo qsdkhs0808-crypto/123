@@ -1,0 +1,5 @@
+﻿target_res_id_hex,ce_orig_idx,ce_immediate_prev_id_hex,ce_immediate_prev_is_common,ce_immediate_next_id_hex,ce_immediate_next_is_common,ce_nearest_prev_common_id_hex,pk_idx_of_prev_common,ce_nearest_next_common_id_hex,pk_idx_of_next_common,pk_gap_between_commons,candidate1_calculated_insert_idx,cand1_actual_prev_id_hex,cand1_actual_next_id_hex,cand1_relative_order_matches_ce,cand2_insert_idx,cand2_actual_prev_id_hex,cand2_actual_next_id_hex,cand2_relative_order_matches_ce
+0x5320bafb,5880,0x531dd20b,Y,0x5323f0ee,Y,0x531dd20b,5290,0x5323f0ee,5291,1,5291,0x531dd20b,0x5323f0ee,PASS,16228,0xfffd1ac6,0xaa8bbc8b,FAIL
+0xaa8bbc8b,11995,0xaa8b51e2,Y,0xaa8d3e31,Y,0xaa8b51e2,10777,0xaa8d3e31,10778,1,10778,0xaa8b51e2,0xaa8d3e31,PASS,16229,0x5320bafb,0xbf735461,FAIL
+0xbf735461,13440,0xbf728d66,Y,0xbf73bffb,Y,0xbf728d66,12042,0xbf73bffb,12043,1,12043,0xbf728d66,0xbf73bffb,PASS,16230,0xaa8bbc8b,0xcce75262,FAIL
+0xcce75262,14383,0xcce4e2d6,Y,0xccf2909d,Y,0xcce4e2d6,12900,0xccf2909d,12901,1,12901,0xcce4e2d6,0xccf2909d,PASS,16231,0xbf735461,0x8c759c7f,FAIL
